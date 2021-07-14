@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import {Accordion} from "./components/Accordion/Accordion";
 import {Rating} from "./components/Rating/Rating";
+import OnOff from "./components/OnOff/OnOff";
 
 export type TitlePropsType = {
   title: string
@@ -15,7 +16,8 @@ function App() {
       <Accordion title={'Menu'} collapsed={true}/>
       <Accordion title={'User'} collapsed={false}/>
       <Rating value={4}/>
-      {/*<onOff/>*/}
+      // 6 lesson
+      <OnOff/>
     </div>
   )
 }
