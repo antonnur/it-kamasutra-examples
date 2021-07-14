@@ -3,9 +3,11 @@ import {TitlePropsType} from "../../App";
 
 type AccordionPropsType = {
   title: string
-  collapsed: boolean
+  collapsed?: boolean
 }
 
+/*
+// длинная запись
 export function Accordion(props: AccordionPropsType) {
   if (props.collapsed) {
     return (
@@ -13,14 +15,25 @@ export function Accordion(props: AccordionPropsType) {
         <AccordionTitle title={props.title}/>
       </div>
     )
+  } else {
+    return (
+      <div>
+        <AccordionTitle title={props.title}/>
+        <AccordionBody/>
+      </div>
+    )
   }
+}
+*/
+
+// короткая запись
+export function Accordion(props: AccordionPropsType) {
   return (
     <div>
       <AccordionTitle title={props.title}/>
-      <AccordionBody/>
+      {!props.collapsed && <AccordionBody/>}
     </div>
   )
-
 }
 
 function AccordionTitle(props: TitlePropsType) {
