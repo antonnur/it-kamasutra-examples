@@ -15,6 +15,7 @@ function App() {
       <Accordion title={'Menu'} collapsed={true}/>
       <Accordion title={'User'} collapsed={false}/>
       <Rating value={4}/>
+      {/*<onOff/>*/}
     </div>
   )
 }
