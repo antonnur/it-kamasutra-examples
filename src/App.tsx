@@ -3,6 +3,7 @@ import './App.css';
 import {Accordion} from "./components/Accordion/Accordion";
 import {Rating} from "./components/Rating/Rating";
 import OnOff from "./components/OnOff/OnOff";
+import {UncontrolledAccordion} from "./components/SelfControlledAccordion/UncontrolledAccordion";
 
 export type TitlePropsType = {
   title: string
@@ -18,6 +19,8 @@ function App() {
       <Rating value={4}/>
       // 6 lesson
       <OnOff/>
+      <UncontrolledAccordion title={'Menu - 2'}/>
+      <UncontrolledAccordion title={'User - 2'}/>
     </div>
   )
 }
