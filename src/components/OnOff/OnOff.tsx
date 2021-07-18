@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-import s from './OnOff.module.css'
 
 type PropsType = {}
 
