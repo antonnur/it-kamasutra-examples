@@ -11,5 +11,4 @@ const callback = action('On or Off clicked')
 
 export const OnMod = () => <UncontrolledOnOff defaultOn={true} onChange={callback}/>
 export const OffMod = () => <UncontrolledOnOff defaultOn={false} onChange={callback}/>
-export const DefaultInputValue = () => <input defaultValue={'yo'}/>
 export const BugMod = () => <div>Unsync when change defaultValue when already rendered</div>

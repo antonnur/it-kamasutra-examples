@@ -5,7 +5,7 @@ import {Rating, RatingValueType} from "./components/Rating/Rating";
 import {OnOff} from "./components/OnOff/OnOff";
 import {UncontrolledAccordion} from "./components/SelfControlledAccordion/UncontrolledAccordion";
 import {UncontrolledRating} from "./components/SelfControlledRating/UncontrolledRating";
-import UncontrolledOnOff from "./components/OnOff/UncontrolledOnOff";
+import {UncontrolledOnOff} from "./components/OnOff/UncontrolledOnOff";
 
 type TitlePropsType = {
   title: string
