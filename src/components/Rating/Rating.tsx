@@ -2,7 +2,7 @@ import React from "react";
 
 export type RatingValueType = 0 | 1 | 2 | 3 | 4 | 5
 
-type StarPropsType = {
+type StartPropsType = {
   selected: boolean
   value: RatingValueType
   onClick: (value: RatingValueType) => void
@@ -25,7 +25,7 @@ export function Rating(props: RatingPropsType) {
   )
 }
 
-function Star(props: StarPropsType) {
+function Star(props: StartPropsType) {
   // if (props.selected === true) //полная запись
   /*if (props.selected) {
     return <span><b>star</b> </span>
