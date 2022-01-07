@@ -13,7 +13,7 @@ type RatingPropsType = {
   onClick: (value: RatingValueType) => void
 }
 
-export function Rating(props: RatingPropsType) {
+function RatingSecret(props: RatingPropsType) {
   return (
     <div>
       <Star selected={props.value > 0} onClick={props.onClick} value={1}/>
@@ -24,8 +24,9 @@ export function Rating(props: RatingPropsType) {
     </div>
   )
 }
+export const Rating = React.memo(RatingSecret)
 
-function Star(props: StartPropsType) {
+function StarSecret(props: StartPropsType) {
   // if (props.selected === true) //полная запись
   /*if (props.selected) {
     return <span><b>star</b> </span>
@@ -36,3 +37,4 @@ function Star(props: StartPropsType) {
     {props.selected ? <b>star </b> : 'star '}
   </span>
 }
+const Star = React.memo(StarSecret)

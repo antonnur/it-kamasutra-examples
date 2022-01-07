@@ -12,7 +12,7 @@ type TitlePropsType = {
 
 }
 
-function App() {
+function AppSecret() {
 
   let [ratingValue, setRatingValue] = useState<RatingValueType>(0)
   let [accordionCollapsed, setAccordionCollapsed] = useState<boolean>(false)
@@ -46,9 +46,11 @@ function App() {
     </div>
   )
 }
+const App = React.memo(AppSecret)
 
-function PageTitle(props: TitlePropsType) {
+function PageTitleSecret(props: TitlePropsType) {
   return <h2>{props.title}</h2>
 }
+const PageTitle = React.memo(PageTitleSecret)
 
 export default App

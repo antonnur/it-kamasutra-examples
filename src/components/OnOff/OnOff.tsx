@@ -5,7 +5,7 @@ type PropsType = {
   onChange: (on: boolean) => void
 }
 
-export function OnOff(props: PropsType) {
+function OnOffSecret(props: PropsType) {
 
   const OnOffStyle = {
     marginTop: '20px',
@@ -51,3 +51,4 @@ export function OnOff(props: PropsType) {
     </div>
   )
 }
+export const OnOff = React.memo(OnOffSecret)

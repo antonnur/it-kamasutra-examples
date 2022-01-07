@@ -56,7 +56,7 @@ export function Accordion(props: AccordionPropsType) {
 */
 
 // короткая запись
-export function Accordion(props: AccordionPropsType) {
+function AccordionSecret(props: AccordionPropsType) {
   return (
     <div>
       <AccordionTitle
@@ -68,19 +68,22 @@ export function Accordion(props: AccordionPropsType) {
     </div>
   )
 }
+export const Accordion = React.memo(AccordionSecret)
 
-function AccordionTitle(props: AccordionTitlePropsType) {
+function AccordionTitleSecret(props: AccordionTitlePropsType) {
   return (
     <h3
       style={{color: props.color ? props.color : 'black'}}
       onClick={(e) => props.onChange()}>-- {props.title} --</h3>
   )
 }
+const AccordionTitle = React.memo(AccordionTitleSecret)
 
-function AccordionBody(props: AccordionBodyPropsType) {
+function AccordionBodySecret(props: AccordionBodyPropsType) {
   return (
     <ul>
       {props.items.map((i, index) => <li onClick={() => {props.onClick(i.value)}} key={index}>{i.title}</li>)}
     </ul>
   )
 }
+const AccordionBody = React.memo(AccordionBodySecret)
