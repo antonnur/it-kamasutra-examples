@@ -4,6 +4,7 @@ export default {
   title: 'useMemo demo',
 }
 
+// 18. useMemo
 export const DifficultCountingExample = () => {
 
   const [a, setA] = useState<number>(5)
@@ -31,8 +32,8 @@ export const DifficultCountingExample = () => {
   }
 
   return <>
-    <input value={a} onChange={(e) => setA(Number(e.currentTarget.value))}/> //Number привидение к числу
-    <input value={b} onChange={(e) => setB(+e.currentTarget.value)}/> //+ привидение к числу
+    <input value={a} onChange={(e) => setA(Number(e.currentTarget.value))}/>
+    <input value={b} onChange={(e) => setB(+e.currentTarget.value)}/>
     <hr/>
     <div>
       Result for a: {resaltA}
@@ -41,12 +42,6 @@ export const DifficultCountingExample = () => {
       Result for b: {resaltB}
     </div>
   </>
-}
-
-
-export const HelpsForReactMemoExample2 = () => {
-
-
 }
 
 const UsersSecret = (props: { users: string[] }) => {
@@ -60,7 +55,7 @@ const Users = React.memo(UsersSecret)
 export const HelpsToReactMemo = () => {
   console.log('HelpsToReactMemo')
   const [counter, setCounter] = useState(0)
-  const [users, setUsers] = useState(['Dim', 'Valera', 'Art'])
+  const [users, setUsers] = useState(['Dim', 'Valera', 'Art', 'Tania'])
 
   const newArray = useMemo(() => {
     const newArray = users.filter(u => u.toLowerCase().indexOf('a') > -1)
