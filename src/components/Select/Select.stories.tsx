@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {Select} from "./Select";
-import {action} from "@storybook/addon-actions";
+// import {action} from "@storybook/addon-actions";
 
 export default {
   title: 'Select',

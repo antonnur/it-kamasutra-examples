@@ -19,7 +19,7 @@ export const DifficultCountingExample = () => {
       let fake = 0
       while (fake < 100000000) {
         fake++
-        const fakeValue = Math.random()
+        // const fakeValue = Math.random()
       }
       tempResultA = tempResultA * i
     }
